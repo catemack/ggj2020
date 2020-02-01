@@ -6,13 +6,14 @@ public class MonumentApproachHandler : MonoBehaviour
 {
     public float minDistance = 10f;
     public Camera playerCamera;
+    public GameObject brokenMonolith;
 
-    BoxCollider m_BoxCollider;
+    GameObject m_Monolith;
 
     // Start is called before the first frame update
     void Start()
     {
-        m_BoxCollider = GetComponent<BoxCollider>();
+        m_Monolith = transform.Find("Monolith").gameObject;
     }
 
     // Update is called once per frame
@@ -20,11 +21,15 @@ public class MonumentApproachHandler : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit))
+        // Check if the player is looking at the object within a certain range
+        if (m_Monolith && Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit))
         {
-            if (hit.distance <= minDistance)
+            if (hit.transform.parent && hit.transform.parent.name == "Monolith and Platform" && hit.distance <= minDistance)
             {
-                //Debug.Log("hit");
+                Vector3 monolithPosition = m_Monolith.transform.position + new Vector3(-0.6f, 0f, -0.2f);
+
+                Destroy(m_Monolith);
+                Instantiate(brokenMonolith, monolithPosition, Quaternion.identity, gameObject.transform);
             }
         }
     }
