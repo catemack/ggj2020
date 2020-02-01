@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class PlayerCharacterController : MonoBehaviour
 {
@@ -29,6 +32,9 @@ public class PlayerCharacterController : MonoBehaviour
     {
         m_CharacterController = GetComponent<CharacterController>();
         m_InputHandler = GetComponent<PlayerInputHandler>();
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
