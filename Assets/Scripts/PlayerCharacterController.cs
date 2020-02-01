@@ -20,6 +20,9 @@ public class PlayerCharacterController : MonoBehaviour
     public float footstepSFXFrequency = 1f;
     public AudioClip footstepSFX;
 
+    [Header("Input")]
+    public float minInteractDistance = 1f;
+
     public Vector3 characterVelocity { get; set; }
 
     CharacterController m_CharacterController;
@@ -62,5 +65,19 @@ public class PlayerCharacterController : MonoBehaviour
         }
 
         m_FootstepDistanceCounter += characterVelocity.magnitude * Time.deltaTime;
+
+        // Pick up pieces on click
+        if (m_InputHandler.GetInteractInputDown())
+        {
+            RaycastHit hit;
+
+            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit))
+            {
+                if (hit.transform.gameObject.tag == "MonolithPiece" && hit.distance <= minInteractDistance)
+                {
+                    Destroy(hit.transform.gameObject);
+                }
+            }
+        }
     }
 }

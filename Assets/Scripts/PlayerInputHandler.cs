@@ -32,4 +32,9 @@ public class PlayerInputHandler : MonoBehaviour
         move = Vector3.ClampMagnitude(move, 1);
         return move;
     }
+
+    public bool GetInteractInputDown()
+    {
+        return Input.GetButtonDown(GameConstants.k_ButtonNameInteract);
+    }
 }
