@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5519442452272374100}
   - component: {fileID: 2540294791514299763}
   - component: {fileID: 4796764866295320746}
+  - component: {fileID: 8753195510330870667}
   m_Layer: 0
   m_Name: OPAQUE01
   m_TagString: Untagged
@@ -58,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b4227454981d7614580773ee5ec340c5, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8753195510330870667
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5764653457280590169}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2602579589132725784, guid: 3da96d900d48bd3488a3de1aff06cd47, type: 3}
 --- !u!1 &7321223915473469174
 GameObject:
   m_ObjectHideFlags: 0
