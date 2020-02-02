@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1318875786}
-  m_IndirectSpecularColor: {r: 9.207121, g: 11.407634, b: 15.097568, a: 1}
+  m_IndirectSpecularColor: {r: 9.222312, g: 11.4273615, b: 15.124614, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -122,13 +122,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &413800680 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8010478662986107363, guid: a397684b93170dc45ae8edb672d00433,
-    type: 3}
-  m_PrefabInstance: {fileID: 8010478662858576139}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &505622131
+--- !u!114 &295319402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,6 +223,12 @@ MonoBehaviour:
   rectLightShadow:
     m_OverrideState: 0
     m_Value: 0
+--- !u!4 &413800680 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8010478662986107363, guid: a397684b93170dc45ae8edb672d00433,
+    type: 3}
+  m_PrefabInstance: {fileID: 8010478662858576139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &602866951 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3682855376865647493, guid: 4f24f4a2d925a4143bbf438f2fae89a8,
@@ -376,7 +376,7 @@ MonoBehaviour:
   rotationSpeed: 5
   footstepSFXFrequency: 0.23
   footstepSFX: {fileID: 8300000, guid: 16dfc8096c6148f46bded7c8e94f35ef, type: 3}
-  minInteractDistance: 1
+  minInteractDistance: 5
 --- !u!82 &831891973
 AudioSource:
   m_ObjectHideFlags: 0
@@ -898,7 +898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: a123fc0ac58cb774e8592c925f167e7c, type: 2}
   m_StaticLightingSkyUniqueID: 1
-  m_SkySettings: {fileID: 505622131}
+  m_SkySettings: {fileID: 295319402}
   m_SkySettingsFromProfile: {fileID: -1658960478407648048, guid: a123fc0ac58cb774e8592c925f167e7c,
     type: 2}
 --- !u!4 &1516935030
@@ -1176,6 +1176,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3658480069064132927, guid: 76046b6b75fdbc145b4ca50f27d1f2a3,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 131072
       objectReference: {fileID: 0}
     - target: {fileID: 3658480069695682254, guid: 76046b6b75fdbc145b4ca50f27d1f2a3,
         type: 3}
