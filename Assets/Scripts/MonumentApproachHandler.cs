@@ -7,8 +7,10 @@ public class MonumentApproachHandler : MonoBehaviour
     public float minDistance = 10f;
     public Camera playerCamera;
     public GameObject brokenMonolith;
+    public float destructionTimer = 10f;
 
     GameObject m_Monolith;
+    float lookTime = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +28,15 @@ public class MonumentApproachHandler : MonoBehaviour
         {
             if (hit.transform.parent && hit.transform.parent.name == "Monolith and Platform" && hit.distance <= minDistance)
             {
-                Vector3 monolithPosition = m_Monolith.transform.position + new Vector3(-0.6f, 0f, -0.2f);
+                lookTime += Time.deltaTime;
 
-                Destroy(m_Monolith);
-                Instantiate(brokenMonolith, monolithPosition, Quaternion.identity, gameObject.transform);
+                if (lookTime >= destructionTimer)
+                {
+                    Vector3 monolithPosition = m_Monolith.transform.position + new Vector3(-0.6f, 0f, -0.2f);
+
+                    Destroy(m_Monolith);
+                    Instantiate(brokenMonolith, monolithPosition, Quaternion.identity, gameObject.transform);
+                }
             }
         }
     }

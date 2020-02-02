@@ -210,7 +210,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9123038791830096715}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.84, y: 1, z: -14.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -236,6 +236,7 @@ MonoBehaviour:
   playerCamera: {fileID: 0}
   brokenMonolith: {fileID: 5756351579131627027, guid: 45816fe4557868f4689e48e1e4da9723,
     type: 3}
+  destructionTimer: 2
 --- !u!1001 &9123038791379363725
 PrefabInstance:
   m_ObjectHideFlags: 0
