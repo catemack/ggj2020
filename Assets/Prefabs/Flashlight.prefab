@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170450478039331688}
-  m_LocalRotation: {x: -0.03204913, y: -0, z: -0, w: 0.9994863}
+  m_LocalRotation: {x: -0.032047447, y: 0, z: 0, w: 0.9994864}
   m_LocalPosition: {x: -0.51, y: -1.0057659, z: 0.81018496}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -79,8 +79,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.78431374, g: 0.78431374, b: 0.74509805, a: 1}
-  m_Intensity: 8388608
-  m_Range: 100
+  m_Intensity: 1048576
+  m_Range: 200
   m_SpotAngle: 40
   m_InnerSpotAngle: 1.5
   m_CookieSize: 10
@@ -126,7 +126,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 1.5
+  m_ShadowRadius: 0.7
   m_ShadowAngle: 0
 --- !u!114 &170450478135744244
 MonoBehaviour:
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 26
+  m_Intensity: 23
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 60
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_ShapeWidth: 0.5
   m_ShapeHeight: 0.5
   m_AspectRatio: 1
-  m_ShapeRadius: 0.8
+  m_ShapeRadius: 0.7
   m_SoftnessScale: 1
   m_UseCustomSpotLightShadowCone: 0
   m_CustomSpotLightShadowCone: 1.5
@@ -233,7 +233,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 0
+  showAdditionalSettings: 1
 --- !u!1 &170450478307402513
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +278,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.78431374, g: 0.78431374, b: 0.74509805, a: 1}
-  m_Intensity: 1048576
+  m_Intensity: 131072
   m_Range: 100
   m_SpotAngle: 80
   m_InnerSpotAngle: 0
@@ -292,22 +292,22 @@ Light:
     m_NormalBias: 1.6
     m_NearPlane: 1.2906051
     m_CullingMatrixOverride:
-      e00: 1
+      e00: 1.1917535
       e01: 0
       e02: 0
       e03: 0
       e10: 0
-      e11: 1
+      e11: 1.1917535
       e12: 0
       e13: 0
       e20: 0
       e21: 0
-      e22: 1
-      e23: 0
+      e22: 1.002
+      e23: -0.2002
       e30: 0
       e31: 0
-      e32: 0
-      e33: 1
+      e32: 1
+      e33: 0
     m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
@@ -323,9 +323,9 @@ Light:
   m_BounceIntensity: 0
   m_ColorTemperature: 6000
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 100}
   m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0.7
+  m_ShadowRadius: 0.5
   m_ShadowAngle: 0
 --- !u!114 &170450478307402517
 MonoBehaviour:
@@ -347,7 +347,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 23
+  m_Intensity: 20
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 40
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_ShapeWidth: 0.5
   m_ShapeHeight: 0.5
   m_AspectRatio: 1
-  m_ShapeRadius: 0.7
+  m_ShapeRadius: 0.5
   m_SoftnessScale: 1
   m_UseCustomSpotLightShadowCone: 0
   m_CustomSpotLightShadowCone: 1
@@ -432,7 +432,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 0
+  showAdditionalSettings: 1
 --- !u!1 &170450478696855723
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +477,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.78431374, g: 0.78431374, b: 0.74509805, a: 1}
-  m_Intensity: 1048576
+  m_Intensity: 131072
   m_Range: 100
   m_SpotAngle: 40
   m_InnerSpotAngle: 2
@@ -524,7 +524,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0.6
+  m_ShadowRadius: 0.5
   m_ShadowAngle: 0
 --- !u!114 &170450478696855722
 MonoBehaviour:
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 23
+  m_Intensity: 20
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 20
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_ShapeWidth: 0.5
   m_ShapeHeight: 0.5
   m_AspectRatio: 1
-  m_ShapeRadius: 0.6
+  m_ShapeRadius: 0.5
   m_SoftnessScale: 1
   m_UseCustomSpotLightShadowCone: 0
   m_CustomSpotLightShadowCone: 4
@@ -631,7 +631,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 0
+  showAdditionalSettings: 1
 --- !u!1 &170450479362434380
 GameObject:
   m_ObjectHideFlags: 0

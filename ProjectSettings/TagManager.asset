@@ -6,6 +6,7 @@ TagManager:
   tags:
   - chunk
   - MonolithPiece
+  - Fire
   layers:
   - Default
   - TransparentFX
