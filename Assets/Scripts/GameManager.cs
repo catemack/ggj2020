@@ -20,9 +20,9 @@ public class GameManager : MonoBehaviour
         _instance = this;
     }
 
-    private GameObject[,] chunks = new GameObject[3,3];
-    
+    public GameObject[] monolithPieces = new GameObject[3];
 
+    private GameObject[,] chunks = new GameObject[3,3];
     private float offset = 60;
 
     private void Start()
@@ -84,6 +84,11 @@ public class GameManager : MonoBehaviour
                         if (brokenMonolith)
                         {
                             Destroy(brokenMonolith.gameObject);
+
+                            foreach (var piece in monolithPieces)
+                            {
+                                piece.SetActive(true);
+                            }
                         }
                     }
                 }
