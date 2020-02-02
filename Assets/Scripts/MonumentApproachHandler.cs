@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MonumentApproachHandler : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class MonumentApproachHandler : MonoBehaviour
     public AudioClip badNoise;
     public GameObject brokenMonolith;
     public float destructionTimer = 10f;
+    public Image blackOverlay;
 
     GameObject m_Monolith;
     PlayerCharacterController m_PlayerController;
@@ -24,6 +26,7 @@ public class MonumentApproachHandler : MonoBehaviour
         m_Monolith = transform.Find("Monolith").gameObject;
         m_PlayerController = player.GetComponent<PlayerCharacterController>();
         m_InputHandler = player.GetComponent<PlayerInputHandler>();
+        blackOverlay.canvasRenderer.SetAlpha(0.0f);
     }
 
     // Update is called once per frame
@@ -43,7 +46,11 @@ public class MonumentApproachHandler : MonoBehaviour
                     if (GameComplete())
                     {
                         playerAudio.PlayOneShot(badNoise);
-                        Application.Quit();
+                        blackOverlay.CrossFadeAlpha(1, 2f, false);
+
+                        //yield return new WaitForSeconds(2f);
+
+                        //Application.Quit();
                     }
                     else
                     {
