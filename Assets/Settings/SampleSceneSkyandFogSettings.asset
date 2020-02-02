@@ -20,8 +20,8 @@ MonoBehaviour:
     min: 0
     max: 360
   skyIntensityMode:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   exposure:
     m_OverrideState: 1
     m_Value: 2
@@ -37,8 +37,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: {x: 0.18750371, y: 0.29181883, z: 0.5}
   desiredLuxValue:
-    m_OverrideState: 0
-    m_Value: 20000
+    m_OverrideState: 1
+    m_Value: 60
   updateMode:
     m_OverrideState: 0
     m_Value: 0
@@ -191,20 +191,20 @@ MonoBehaviour:
     m_Value: 50
   albedo:
     m_OverrideState: 1
-    m_Value: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+    m_Value: {r: 0.509434, g: 0.503014, b: 0.41331437, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 15
     min: 1
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
   anisotropy:
     m_OverrideState: 1
-    m_Value: 0.6
+    m_Value: 0.7
     min: -1
     max: 1
   globalLightProbeDimmer:
