@@ -6,6 +6,9 @@ public class MonumentApproachHandler : MonoBehaviour
 {
     public float minDistance = 10f;
     public Camera playerCamera;
+    public AudioSource playerAudio;
+    public AudioClip crumbleSFX;
+    public AudioClip badNoise;
     public GameObject brokenMonolith;
     public float destructionTimer = 10f;
 
@@ -36,6 +39,9 @@ public class MonumentApproachHandler : MonoBehaviour
 
                     Destroy(m_Monolith);
                     Instantiate(brokenMonolith, monolithPosition, Quaternion.identity, gameObject.transform);
+
+                    playerAudio.PlayOneShot(badNoise);
+                    playerAudio.PlayOneShot(crumbleSFX);
                 }
             }
         }
