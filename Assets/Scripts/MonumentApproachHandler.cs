@@ -5,20 +5,26 @@ using UnityEngine;
 public class MonumentApproachHandler : MonoBehaviour
 {
     public float minDistance = 10f;
+    public GameObject player;
     public Camera playerCamera;
     public AudioSource playerAudio;
     public AudioClip crumbleSFX;
     public AudioClip badNoise;
+    public GameObject wholeMonolith;
     public GameObject brokenMonolith;
     public float destructionTimer = 10f;
 
     GameObject m_Monolith;
+    PlayerCharacterController m_PlayerController;
+    PlayerInputHandler m_InputHandler;
     float lookTime = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
         m_Monolith = transform.Find("Monolith").gameObject;
+        m_PlayerController = player.GetComponent<PlayerCharacterController>();
+        m_InputHandler = player.GetComponent<PlayerInputHandler>();
     }
 
     // Update is called once per frame
@@ -27,13 +33,13 @@ public class MonumentApproachHandler : MonoBehaviour
         RaycastHit hit;
 
         // Check if the player is looking at the object within a certain range
-        if (m_Monolith && Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit))
+        if (!GameComplete() && m_Monolith && Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit))
         {
             if (hit.transform.parent && hit.transform.parent.name == "Monolith and Platform" && hit.distance <= minDistance)
             {
                 lookTime += Time.deltaTime;
 
-                if (lookTime >= destructionTimer)
+                if (lookTime >= destructionTimer || m_InputHandler.GetInteractInputDown())
                 {
                     Vector3 monolithPosition = m_Monolith.transform.position + new Vector3(-0.6f, 0f, -0.2f);
 
@@ -42,8 +48,33 @@ public class MonumentApproachHandler : MonoBehaviour
 
                     playerAudio.PlayOneShot(badNoise);
                     playerAudio.PlayOneShot(crumbleSFX);
+
+                    lookTime = 0f;
                 }
             }
         }
+        else if (GameComplete() && !m_Monolith)
+        {
+            m_Monolith = Instantiate(wholeMonolith, transform);
+            playerAudio.PlayOneShot(badNoise);
+        }
+        else if (GameComplete() && m_Monolith && Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit))
+        {
+            if (hit.transform.parent && hit.transform.parent.name == "Monolith and Platform" && hit.distance <= minDistance)
+            {
+                lookTime += Time.deltaTime;
+
+                if (lookTime >= destructionTimer)
+                {
+                    playerAudio.PlayOneShot(badNoise);
+                    Application.Quit();
+                }
+            }
+        }
+    }
+
+    private bool GameComplete()
+    {
+        return m_PlayerController.collectedPiecesCount == GameManager.instance.monolithPieces.Length;
     }
 }

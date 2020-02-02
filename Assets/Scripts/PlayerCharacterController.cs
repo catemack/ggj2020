@@ -32,6 +32,7 @@ public class PlayerCharacterController : MonoBehaviour
 
     public Vector3 characterVelocity { get; set; }
     public bool isGrounded { get; set; }
+    public int collectedPiecesCount { get; set; }
 
     CharacterController m_CharacterController;
     PlayerInputHandler m_InputHandler;
@@ -120,6 +121,7 @@ public class PlayerCharacterController : MonoBehaviour
                 {
                     Destroy(hit.transform.gameObject);
                     audioSource.PlayOneShot(piecePickupSFX);
+                    collectedPiecesCount++;
                 }
             }
         }
