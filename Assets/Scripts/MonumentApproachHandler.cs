@@ -48,9 +48,7 @@ public class MonumentApproachHandler : MonoBehaviour
                         playerAudio.PlayOneShot(badNoise);
                         blackOverlay.CrossFadeAlpha(1, 2f, false);
 
-                        //yield return new WaitForSeconds(2f);
-
-                        //Application.Quit();
+                        StartCoroutine(CloseGame());
                     }
                     else
                     {
@@ -79,5 +77,11 @@ public class MonumentApproachHandler : MonoBehaviour
     private bool GameComplete()
     {
         return m_PlayerController.collectedPiecesCount == GameManager.instance.monolithPieces.Length;
+    }
+
+    private IEnumerator CloseGame()
+    {
+        yield return new WaitForSeconds(2f);
+        Application.Quit();
     }
 }
