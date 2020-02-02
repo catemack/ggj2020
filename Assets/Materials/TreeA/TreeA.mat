@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_tree
+  m_Name: TreeA
   m_Shader: {fileID: -6465566751694194690, guid: 7fe1752322d039d41a6ead65aa7687d3,
     type: 3}
   m_ShaderKeywords: 
