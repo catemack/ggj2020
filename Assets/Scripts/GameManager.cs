@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour
         {
             for (int y = -1; y <= 1; y++)
             {
-
                 var newChunkPosition = centerCoordinate + new Vector3(offset * x, 0, offset * y);
 
                 var thisX = centerX + x;
@@ -71,8 +70,23 @@ public class GameManager : MonoBehaviour
                     thisY -= 3;
                 }
 
+                Vector3 previousPosition = chunks[thisX, thisY].transform.position;
                 chunks[thisX, thisY].transform.position = newChunkPosition;
 
+                if (previousPosition != newChunkPosition)
+                {
+                    Transform monolith = chunks[thisX, thisY].transform.Find("Monolith and Platform");
+
+                    if (monolith)
+                    {
+                        Transform brokenMonolith = monolith.Find("MonolithBroken(Clone)");
+
+                        if (brokenMonolith)
+                        {
+                            Destroy(brokenMonolith.gameObject);
+                        }
+                    }
+                }
             }
         }
     }
