@@ -37,4 +37,9 @@ public class PlayerInputHandler : MonoBehaviour
     {
         return Input.GetButtonDown(GameConstants.k_ButtonNameInteract);
     }
+
+    public bool GetJumpInputDown()
+    {
+        return Input.GetButtonDown(GameConstants.k_ButtonNameJump);
+    }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1318875786}
-  m_IndirectSpecularColor: {r: 0.5115271, g: 0.6337057, b: 0.838743, a: 1}
+  m_IndirectSpecularColor: {r: 0.51237714, g: 0.6348634, b: 0.84027255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1070,6 +1070,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1402032555}
   audioSource: {fileID: 831891973}
+  jumpForce: 5
+  gravityDownForce: 10
+  groundCheckDistance: 2
+  groundCheckLayers:
+    serializedVersion: 2
+    m_Bits: 1
   maxGroundSpeed: 10
   groundMovementSharpness: 15
   rotationSpeed: 5
@@ -1562,7 +1568,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1055848485}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1129054182
+--- !u!114 &1089573973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2254,7 +2260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: a123fc0ac58cb774e8592c925f167e7c, type: 2}
   m_StaticLightingSkyUniqueID: 1
-  m_SkySettings: {fileID: 1129054182}
+  m_SkySettings: {fileID: 1089573973}
   m_SkySettingsFromProfile: {fileID: -1658960478407648048, guid: a123fc0ac58cb774e8592c925f167e7c,
     type: 2}
 --- !u!4 &1516935030
