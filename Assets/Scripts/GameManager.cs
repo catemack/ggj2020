@@ -20,10 +20,10 @@ public class GameManager : MonoBehaviour
         _instance = this;
     }
 
-    private GameObject[,] chunks = new GameObject[5,5];
+    private GameObject[,] chunks = new GameObject[3,3];
     
 
-    private float offset = 50;
+    private float offset = 60;
 
     private void Start()
     {
@@ -32,8 +32,8 @@ public class GameManager : MonoBehaviour
         {
             var chunkNumber = chunk.GetComponent<ChunkTrigger>().chunkNumber;
 
-            var x = chunkNumber % 5;
-            var y = chunkNumber / 5;
+            var x = chunkNumber % 3;
+            var y = chunkNumber / 3;
             
             chunks[x,y] = chunk;
         }
@@ -43,12 +43,12 @@ public class GameManager : MonoBehaviour
     {
         var centerCoordinate = center.transform.position;
         var centerChunkNumber = center.GetComponent<ChunkTrigger>().chunkNumber;
-        var centerX = centerChunkNumber % 5;
-        var centerY = centerChunkNumber / 5;
+        var centerX = centerChunkNumber % 3;
+        var centerY = centerChunkNumber / 3;
         
-        for (int x = -2; x <= 2; x++)
+        for (int x = -1; x <= 1; x++)
         {
-            for (int y = -2; y <= 2; y++)
+            for (int y = -1; y <= 1; y++)
             {
 
                 var newChunkPosition = centerCoordinate + new Vector3(offset * x, 0, offset * y);
@@ -56,19 +56,19 @@ public class GameManager : MonoBehaviour
                 var thisX = centerX + x;
                 if (thisX < 0)
                 {
-                    thisX += 5;
-                } else if (thisX > 4)
+                    thisX += 3;
+                } else if (thisX > 2)
                 {
-                    thisX -= 5;
+                    thisX -= 3;
                 }
 
                 var thisY = centerY + y;
                 if (thisY < 0)
                 {
-                    thisY += 5;
-                } else if (thisY > 4)
+                    thisY += 3;
+                } else if (thisY > 2)
                 {
-                    thisY -= 5;
+                    thisY -= 3;
                 }
 
                 chunks[thisX, thisY].transform.position = newChunkPosition;
