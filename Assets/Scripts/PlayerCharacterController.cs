@@ -25,6 +25,7 @@ public class PlayerCharacterController : MonoBehaviour
     [Header("Audio")]
     public float footstepSFXFrequency = 1f;
     public AudioClip footstepSFX;
+    public AudioClip piecePickupSFX;
 
     [Header("Input")]
     public float minInteractDistance = 1f;
@@ -118,6 +119,7 @@ public class PlayerCharacterController : MonoBehaviour
                 if (hit.transform.gameObject.tag == "MonolithPiece" && hit.distance <= minInteractDistance)
                 {
                     Destroy(hit.transform.gameObject);
+                    audioSource.PlayOneShot(piecePickupSFX);
                 }
             }
         }

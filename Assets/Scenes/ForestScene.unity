@@ -122,7 +122,62 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &295319402
+--- !u!4 &413800680 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8010478662986107363, guid: a397684b93170dc45ae8edb672d00433,
+    type: 3}
+  m_PrefabInstance: {fileID: 8010478662858576139}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &602866951 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3682855376865647493, guid: 4f24f4a2d925a4143bbf438f2fae89a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 3682855376356236930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &639257890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639257892}
+  - component: {fileID: 639257891}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &639257891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639257890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502524ed8832a674f9ac45a5dd0e3204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &639257892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639257890}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5457306, y: 5.6422253, z: 0.5932064}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &753932013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,61 +278,6 @@ MonoBehaviour:
   rectLightShadow:
     m_OverrideState: 0
     m_Value: 0
---- !u!4 &413800680 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8010478662986107363, guid: a397684b93170dc45ae8edb672d00433,
-    type: 3}
-  m_PrefabInstance: {fileID: 8010478662858576139}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &602866951 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3682855376865647493, guid: 4f24f4a2d925a4143bbf438f2fae89a8,
-    type: 3}
-  m_PrefabInstance: {fileID: 3682855376356236930}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &639257890
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 639257892}
-  - component: {fileID: 639257891}
-  m_Layer: 0
-  m_Name: Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &639257891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639257890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 502524ed8832a674f9ac45a5dd0e3204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &639257892
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639257890}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5457306, y: 5.6422253, z: 0.5932064}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &819919952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9116118883193534690, guid: c5e5ff06124c859458ab177602c78585,
@@ -376,6 +376,7 @@ MonoBehaviour:
   rotationSpeed: 5
   footstepSFXFrequency: 0.23
   footstepSFX: {fileID: 8300000, guid: 16dfc8096c6148f46bded7c8e94f35ef, type: 3}
+  piecePickupSFX: {fileID: 8300000, guid: c5fd57ff216a3014cbbf52315fd73e53, type: 3}
   minInteractDistance: 5
 --- !u!82 &831891973
 AudioSource:
@@ -898,7 +899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: a123fc0ac58cb774e8592c925f167e7c, type: 2}
   m_StaticLightingSkyUniqueID: 1
-  m_SkySettings: {fileID: 295319402}
+  m_SkySettings: {fileID: 753932013}
   m_SkySettingsFromProfile: {fileID: -1658960478407648048, guid: a123fc0ac58cb774e8592c925f167e7c,
     type: 2}
 --- !u!4 &1516935030
@@ -1180,7 +1181,7 @@ PrefabInstance:
     - target: {fileID: 3658480069064132927, guid: 76046b6b75fdbc145b4ca50f27d1f2a3,
         type: 3}
       propertyPath: m_Intensity
-      value: 131072
+      value: 32768
       objectReference: {fileID: 0}
     - target: {fileID: 3658480069695682254, guid: 76046b6b75fdbc145b4ca50f27d1f2a3,
         type: 3}
