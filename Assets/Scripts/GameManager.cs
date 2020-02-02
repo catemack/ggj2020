@@ -22,9 +22,7 @@ public class GameManager : MonoBehaviour
 
     private GameObject[,] chunks = new GameObject[5,5];
     
-    // public UnityEvent someEvent;
 
-    private GameObject currentCenter;
     private float offset = 50;
 
     private void Start()

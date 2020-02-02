@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1661995544785402013}
   - component: {fileID: 1661995544785402011}
   m_Layer: 0
-  m_Name: Chunk
+  m_Name: Chunk Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 95, y: 6, z: 95}
+  m_Size: {x: 45, y: 6, z: 45}
   m_Center: {x: 0, y: 3.5, z: 0}
 --- !u!114 &1661995544785402011
 MonoBehaviour:
